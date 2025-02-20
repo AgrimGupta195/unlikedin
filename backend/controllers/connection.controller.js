@@ -187,8 +187,6 @@ export const getConnectionStatus = async (req, res) => {
 				return res.json({ status: "received", requestId: pendingRequest._id });
 			}
 		}
-
-		// if no connection or pending req found
 		res.json({ status: "not_connected" });
 	} catch (error) {
 		console.error("Error in getConnectionStatus controller:", error);
